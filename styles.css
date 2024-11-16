@@ -47,6 +47,22 @@ nav a:hover {
     gap: 20px;
 }
 
+/* Ajuste para igualar el tamaño de las imágenes */
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Mantiene la relación de aspecto */
+    max-width: 600px; /* Puedes ajustar este valor según el diseño que prefieras */
+    margin-bottom: 20px;
+}
+
+/* Para las imágenes dentro de la sección de atracciones que están en el grid */
+.grid-container img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Para que no se desborden en los divs */
+}
+
 footer {
     background-color: #2196F3;
     color: white;
@@ -55,92 +71,5 @@ footer {
 }
 
 /* Pricing Section */
-.price-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
-input[type="range"] {
-    width: 80%;
-    margin: 10px 0;
-    -webkit-appearance: none;
-    appearance: none;
-    height: 10px;
-    background: #2196F3;
-    outline: none;
-    border-radius: 5px;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #FFC107;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.price-display {
-    font-size: 1.5rem;
-    color: #4CAF50;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-/* Cost Breakdown Section */
-#cost-breakdown {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#cost-breakdown h2 {
-    color: #2196F3;
-}
-
-#cost-breakdown p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-}
-
-#cost-breakdown ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-#cost-breakdown li {
-    font-size: 1rem;
-    margin: 10px 0;
-    color: #555;
-}
-
-.price-summary {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.price-summary h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
+.price-container
 
