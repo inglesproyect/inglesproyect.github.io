@@ -1,109 +1,84 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Resetear márgenes y padding para un diseño limpio */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     color: #333;
+    background-color: #f4f4f4;
+    padding: 0 20px;
 }
 
+/* Estilo del encabezado */
 header {
-    position: relative;
-    width: 100%;
-    height: 500px; /* Ajusta la altura según lo necesites */
-    overflow: hidden;
-}
-
-/* Estilo para el video de fondo */
-#header-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Hace que el video cubra el área del header sin deformarse */
-    z-index: -1; /* Asegura que el video quede detrás del contenido */
-}
-
-/* Estilo para el contenido del encabezado */
-.header-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    background-color: #2a3d66;
     color: white;
-    z-index: 1; /* Asegura que el texto esté encima del video */
+    padding: 40px 0;
 }
 
-.header-content h1 {
+header h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.header-content p {
-    font-size: 1.2rem;
-}
-
-/* Pricing Section */
-.price-container {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.price-breakdown {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    margin-top: 30px;
-}
-
-.price-breakdown h3 {
-    font-size: 1.2rem;
-    color: #4CAF50;
-}
-
-.price-breakdown ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.price-breakdown li {
-    font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
-.price-breakdown .total {
-    font-weight: bold;
+header p {
     font-size: 1.5rem;
-    color: #2196F3;
 }
 
-/* Section Styling */
+/* Estilo de la navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #4c6a92;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: #f4f4f4;
+}
+
+/* Secciones */
+.section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .section h2 {
-    font-size: 2rem;
-    color: #4CAF50;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2a3d66;
 }
 
 .section p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    color: #555;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
-/* Grid Layout for Attractions */
+/* Contenedor de la cuadrícula */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
 
@@ -111,30 +86,82 @@ header {
     text-align: center;
 }
 
-.grid-container div h3 {
-    font-size: 1.5rem;
-    color: #2196F3;
-}
-
-.grid-container div p {
-    font-size: 1rem;
-    margin-top: 10px;
-}
-
-.grid-container div img {
+.grid-container img {
     width: 100%;
     height: auto;
-    object-fit: cover;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-/* Media Queries for Responsiveness */
+/* Estilo de la sección de video */
+#video {
+    text-align: center;
+}
+
+#video iframe {
+    border-radius: 10px;
+    max-width: 100%;
+    height: 315px;
+}
+
+/* Estilo de la sección de precios */
+.price-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.price-display {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.price-summary {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+/* Estilo para el pie de página */
+footer {
+    text-align: center;
+    background-color: #2a3d66;
+    color: white;
+    padding: 10px 0;
+    margin-top: 40px;
+}
+
+/* Estilo para dispositivos móviles */
 @media (max-width: 768px) {
     .grid-container {
-        grid-template-columns: 1fr; /* For smaller screens, display in a single column */
+        grid-template-columns: 1fr;
     }
-    
+
     nav {
         flex-direction: column;
+        padding: 20px 0;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .section p {
+        font-size: 1.1rem;
     }
 }
