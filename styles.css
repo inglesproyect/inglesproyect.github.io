@@ -3,12 +3,13 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f5f5;
+    background-color: #f0f5f5; /* Fondo suave */
     color: #333;
 }
 
+/* Header */
 header {
-    background-color: #3498db; /* Azul Turquesa */
+    background-color: #3498db; /* Azul Turquesa vibrante */
     color: white;
     padding: 20px;
     text-align: center;
@@ -17,12 +18,15 @@ header {
 header h1 {
     font-size: 2.5rem;
     margin: 0;
+    letter-spacing: 1px; /* Espaciado de letras */
 }
 
 header p {
     font-size: 1.2rem;
+    margin-top: 10px;
 }
 
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -35,32 +39,38 @@ nav a {
     text-decoration: none;
     padding: 10px 20px;
     text-align: center;
+    transition: background-color 0.3s ease; /* Transición suave */
 }
 
 nav a:hover {
-    background-color: #1abc9c; /* Verde agua */
+    background-color: #1abc9c; /* Verde agua brillante */
 }
 
+/* Main Sections */
 section {
     padding: 40px 20px;
     margin: 20px;
     background-color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 h2 {
     color: #3498db; /* Azul Turquesa */
     font-size: 1.8rem;
     margin-bottom: 20px;
+    text-transform: uppercase; /* Mayúsculas para un toque elegante */
 }
 
+/* Image Styling */
 img {
     width: 100%;
     max-width: 500px;
     height: auto;
     margin-top: 20px;
+    border-radius: 8px; /* Bordes redondeados */
 }
 
+/* Grid Layout */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,7 +83,7 @@ img {
 
 /* Activities Section */
 #activities {
-    background-color: #ecf0f1;
+    background-color: #ecf0f1; /* Fondo claro */
     padding: 40px 20px;
     margin: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -91,6 +101,11 @@ img {
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Efecto de hover */
+}
+
+.activity:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
 }
 
 .activity h3 {
@@ -113,7 +128,7 @@ img {
 
 /* Pricing Section */
 #pricing {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Fondo muy suave */
 }
 
 .price-container {
@@ -127,17 +142,25 @@ img {
 input[type="range"] {
     width: 80%;
     margin: 10px 0;
+    background-color: #3498db; /* Azul brillante */
+    border: none;
+    border-radius: 5px;
+}
+
+input[type="range"]:focus {
+    outline: none; /* Quitar borde de foco */
 }
 
 .price-display {
     font-size: 1.5rem;
     font-weight: bold;
     margin-top: 10px;
+    color: #2980b9; /* Azul para resaltar */
 }
 
 /* Cost Breakdown */
 #cost-breakdown {
-    background-color: #ecf0f1;
+    background-color: #ecf0f1; /* Fondo suave */
 }
 
 .price-summary {
@@ -147,6 +170,7 @@ input[type="range"] {
     margin-top: 20px;
 }
 
+/* Footer */
 footer {
     background-color: #2980b9; /* Azul más oscuro */
     color: white;
@@ -155,4 +179,6 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Sombra superior */
 }
+
