@@ -7,7 +7,7 @@
 
 /* Body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     color: #333;
     line-height: 1.6;
@@ -15,7 +15,7 @@ body {
 
 /* Header */
 .header {
-    background: #008cba;
+    background: #1e90ff; /* Azul vibrante */
     color: white;
     padding: 40px 20px;
     text-align: center;
@@ -48,7 +48,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #008cba;
+    background-color: #1e90ff; /* Azul cuando pasa el ratón */
 }
 
 /* Section Styles */
@@ -60,7 +60,7 @@ nav a:hover {
 .section h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    color: #008cba;
+    color: #1e90ff;
     text-align: center;
 }
 
@@ -92,7 +92,9 @@ nav a:hover {
 .grid-container img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
+    border: 4px solid #ff6347; /* Borde naranja como si fuera un marco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Activity List */
@@ -119,11 +121,13 @@ nav a:hover {
 .activity img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
+    border: 4px solid #32cd32; /* Borde verde claro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .activity h3 {
-    color: #008cba;
+    color: #1e90ff;
     font-size: 1.6em;
     margin: 10px 0;
 }
@@ -144,7 +148,7 @@ nav a:hover {
 .price-display {
     margin-top: 10px;
     font-size: 1.5em;
-    color: #008cba;
+    color: #ff6347; /* Naranja */
 }
 
 .price-summary {
@@ -163,6 +167,7 @@ nav a:hover {
 .price-summary p {
     font-size: 1.5em;
     font-weight: bold;
+    color: #32cd32; /* Verde claro */
 }
 
 /* Footer */
